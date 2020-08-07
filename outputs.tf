@@ -1,12 +1,12 @@
 #####
 # sgs
 #####
-output "sg_public_id" {
-  value = join("", aws_security_group.public.*.id)
+output "sg_bastion_public_id" {
+  value = join("", aws_security_group.bastion_public.*.id)
 }
 
-output "sg_bastion_id" {
-  value = join("", aws_security_group.bastion.*.id)
+output "sg_bastion_private_id" {
+  value = join("", aws_security_group.bastion_private.*.id)
 }
 
 #########
@@ -15,7 +15,6 @@ output "sg_bastion_id" {
 output "key_names" {
   value = aws_key_pair.bastion.*.key_name
 }
-
 
 #####
 # VPC

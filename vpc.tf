@@ -10,7 +10,6 @@ variable "vpc_name" {
 variable "azs" {
   description = "List of availability zones"
   type        = list(string)
-  default     = []
 }
 
 variable "cidr" {

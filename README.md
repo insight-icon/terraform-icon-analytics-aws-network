@@ -39,7 +39,7 @@ No issue is creating limit on this module.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
 | allow\_ssh\_commands | Allows the SSH user to execute one-off commands. Pass 'True' to enable. Warning: These commands are not logged and increase the vulnerability of the system. Use at your own discretion. | `string` | `""` | no |
-| azs | List of availability zones | `list(string)` | `[]` | no |
+| azs | List of availability zones | `list(string)` | n/a | yes |
 | bastion\_host\_name | The hostname for bastion | `string` | `"bastion"` | no |
 | bastion\_monitoring\_enabled | Cloudwatch monitoring on bastion | `bool` | `true` | no |
 | bucket\_force\_destroy | The bucket and all objects should be destroyed when using true | `bool` | `false` | no |
@@ -75,8 +75,8 @@ No issue is creating limit on this module.
 | private\_subnets\_cidr\_blocks | n/a |
 | public\_subnet\_cidr\_blocks | n/a |
 | public\_subnets | n/a |
-| sg\_bastion\_id | n/a |
-| sg\_public\_id | #### sgs #### |
+| sg\_bastion\_private\_id | n/a |
+| sg\_bastion\_public\_id | #### sgs #### |
 | vpc\_id | #### VPC #### |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

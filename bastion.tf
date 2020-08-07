@@ -201,16 +201,6 @@ resource "aws_s3_bucket_object" "keys_uploads" {
   kms_key_id = join("", aws_kms_key.key.*.arn)
 }
 
-resource "aws_security_group" "bastion" {
-  count = var.create && var.enable_bastion ? 1 : 0
-
-  description = "Enable SSH access to the bastion host from external via SSH port"
-  name        = "bation-${var.id}"
-  vpc_id      = module.vpc.vpc_id
-
-  tags = var.tags
-}
-
 data "aws_iam_policy_document" "assume_policy_document" {
   statement {
     actions = [
@@ -322,7 +312,7 @@ resource "aws_instance" "this" {
   instance_type          = var.instance_type
   user_data              = data.template_file.user_data.rendered
   subnet_id              = module.vpc.public_subnets[0]
-  vpc_security_group_ids = [join("", aws_security_group.public.*.id)]
+  vpc_security_group_ids = [join("", aws_security_group.bastion_public.*.id), join("", aws_security_group.bastion_private.*.id)]
   monitoring             = var.bastion_monitoring_enabled
 
   tags = merge({ name = "bastion" }, var.tags)
