@@ -9,6 +9,14 @@ output "sg_bastion_private_id" {
   value = join("", aws_security_group.bastion_private.*.id)
 }
 
+output "sg_rds_id" {
+  value = join("", aws_security_group.rds.*.id)
+}
+
+output "sg_redshift_id" {
+  value = join("", aws_security_group.redshift.*.id)
+}
+
 #########
 # Bastion
 #########
