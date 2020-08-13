@@ -17,6 +17,14 @@ output "sg_redshift_id" {
   value = join("", aws_security_group.redshift.*.id)
 }
 
+output "sg_prometheus_id" {
+  value = join("", aws_security_group.prometheus.*.id)
+}
+
+//output "sg_logging_id" {
+//  value = join("", aws_security_group.logging.*.id)
+//}
+
 #########
 # Bastion
 #########
