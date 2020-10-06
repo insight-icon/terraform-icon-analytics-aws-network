@@ -47,6 +47,8 @@ module "vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
 
+  enable_public_redshift = true
+
   azs  = var.azs
   cidr = var.cidr
 
