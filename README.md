@@ -48,7 +48,7 @@ No issue is creating limit on this module.
 | cidr | The cidr range for network | `string` | `"10.0.0.0/16"` | no |
 | create | Bool to create | `bool` | `true` | no |
 | domain\_name | #### DNS #### | `string` | `""` | no |
-| enable\_bastion | Bool to enable bastion | `bool` | `true` | no |
+| enable\_bastion | Bool to enable bastion | `bool` | `false` | no |
 | enable\_prometheus | Enable prometheus monitoring | `bool` | `true` | no |
 | extra\_user\_data\_content | Additional scripting to pass to the bastion host. For example, this can include installing postgresql for the `psql` command. | `string` | `""` | no |
 | id | The id of the resources | `string` | n/a | yes |

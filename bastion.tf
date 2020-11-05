@@ -1,7 +1,7 @@
 variable "enable_bastion" {
   description = "Bool to enable bastion"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "instance_type" {
