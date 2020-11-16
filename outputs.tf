@@ -21,17 +21,6 @@ output "sg_prometheus_id" {
   value = join("", aws_security_group.prometheus.*.id)
 }
 
-//output "sg_logging_id" {
-//  value = join("", aws_security_group.logging.*.id)
-//}
-
-#########
-# Bastion
-#########
-output "key_names" {
-  value = aws_key_pair.bastion.*.key_name
-}
-
 #####
 # VPC
 #####
