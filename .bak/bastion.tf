@@ -91,11 +91,6 @@ variable "public_ssh_port" {
 #####
 # DNS
 #####
-variable "domain_name" {
-  description = ""
-  type        = string
-  default     = ""
-}
 
 variable "bastion_host_name" {
   description = "The hostname for bastion"
@@ -318,3 +313,10 @@ resource "aws_instance" "this" {
   tags = merge({ name = "bastion" }, var.tags)
 }
 
+//output "sg_bastion_public_id" {
+//  value = join("", aws_security_group.bastion_public.*.id)
+//}
+//
+//output "sg_bastion_private_id" {
+//  value = join("", aws_security_group.bastion_private.*.id)
+//}

@@ -60,7 +60,7 @@ func configureTerraformOptions(t *testing.T, exampleFolder string) (*terraform.O
 		// Variables to pass to our Terraform code using -var options
 		Vars: map[string]interface{}{
 			"aws_region":    awsRegion,
-			"public_key_path":    publicKeyPath,
+// 			"public_key_path":    publicKeyPath,
 			//"private_key_path": privateKeyPath,
 		},
 	}

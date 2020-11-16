@@ -40,6 +40,7 @@ No issue is creating limit on this module.
 | azs | List of availability zones | `list(string)` | n/a | yes |
 | cidr | The cidr range for network | `string` | `"10.0.0.0/16"` | no |
 | create | Bool to create | `bool` | `true` | no |
+| domain\_name | n/a | `string` | `""` | no |
 | enable\_prometheus | Enable prometheus monitoring | `bool` | `true` | no |
 | id | The id of the resources | `string` | n/a | yes |
 | private\_subnets | List of cidr ranges for private subnets | `list(string)` | <pre>[<br>  "10.0.101.0/24",<br>  "10.0.102.0/24",<br>  "10.0.103.0/24"<br>]</pre> | no |
@@ -57,8 +58,6 @@ No issue is creating limit on this module.
 | private\_subnets\_cidr\_blocks | n/a |
 | public\_subnet\_cidr\_blocks | n/a |
 | public\_subnets | n/a |
-| sg\_bastion\_private\_id | n/a |
-| sg\_bastion\_public\_id | #### sgs #### |
 | sg\_prometheus\_id | n/a |
 | sg\_rds\_id | n/a |
 | sg\_redshift\_id | n/a |

@@ -10,12 +10,12 @@ resource "random_pet" "this" {
   length = 2
 }
 
-variable "public_key_path" {}
+//variable "public_key_path" {}
 
 module "defaults" {
-  source           = "../.."
-  id               = random_pet.this.id
-  azs              = ["us-east-1a", "us-east-1b", "us-east-1c"]
-  public_key_paths = [var.public_key_path]
+  source = "../.."
+  id     = random_pet.this.id
+  azs    = ["us-east-1a", "us-east-1b", "us-east-1c"]
+  //  public_key_paths = [var.public_key_path]
 }
 
